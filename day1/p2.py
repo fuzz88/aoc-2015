@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 floor = 0
 directions = {")": -1, "(": 1}
 for i, c in enumerate([line[:-1] for line in open(0).read()]):
