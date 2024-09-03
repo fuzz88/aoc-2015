@@ -7,4 +7,4 @@ def nice?(string)
   string.chars.count { |char| vowels.include?(char) } >= 3
 end
 
-puts $stdin.each_line.count {|line| nice?(line)}
+puts $stdin.each_line.count { |line| nice?(line) }

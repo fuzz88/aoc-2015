@@ -3,4 +3,4 @@ def nice?(string)
   string.match(/(\w).\1/)
 end
 
-puts $stdin.each_line.count {|line| nice? line}
+puts $stdin.each_line.count { |line| nice? line }
