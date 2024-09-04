@@ -13,6 +13,6 @@ directions = {
 
 visited = [Vector2.new(0,0)] * 2
 
-$stdin.read().chomp.each_char {|c| visited.append(visited[visited.size-2] + directions[c])}
+$stdin.read().chomp.each_char { |c| visited.append(visited[visited.size-2] + directions[c]) }
 
 puts visited.uniq.size
