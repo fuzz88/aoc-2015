@@ -31,9 +31,8 @@ def solve(wire):
             return solve(expr[0]) >> solve(expr[2]) & 0xFFFF
 
 
-if __name__ == "__main__":
-    b = solve("a")
-    print(b)
-    scheme["b"] = str(b)
-    solve.cache_clear()
-    print(solve("a"))
+b = solve("a")
+print(b)
+scheme["b"] = str(b)
+solve.cache_clear()
+print(solve("a"))
