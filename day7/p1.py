@@ -13,9 +13,7 @@ for line in lines:
 
 @cache
 def solve(wire):
-    try:
-        scheme[wire]
-    except KeyError:
+    if wire not in scheme.keys():
         return int(wire)
     expr = scheme[wire].split()
     if len(expr) == 1:
