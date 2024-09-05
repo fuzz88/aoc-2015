@@ -14,7 +14,7 @@ for line in lines:
 @cache
 def solve(wire):
     try:
-        scheme[wire] 
+        scheme[wire]
     except KeyError:
         return int(wire)
     expr = scheme[wire].split()
@@ -31,6 +31,7 @@ def solve(wire):
             return solve(expr[0]) << solve(expr[2]) & 0xFFFF
         if expr[1] == "RSHIFT":
             return solve(expr[0]) >> solve(expr[2]) & 0xFFFF
+
 
 if __name__ == "__main__":
     b = solve("a")
