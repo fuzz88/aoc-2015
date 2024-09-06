@@ -1,11 +1,9 @@
 input = "3113322113"
 
-def one_round(seq)
-  seq
+def one_round!()
+  input = input
 end
 
-40.times do
-  input = one_round(input)
-end
+40.times { one_round! }
 
 puts input.length
