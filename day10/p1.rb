@@ -8,4 +8,3 @@ end
 
 ARGV[0].to_i.times { input = (one_round! input) }
 puts input.length
-
