@@ -6,4 +6,5 @@ $stdin.each_line do |line|
   persons[match[1]][match[4]] = sign * match[3].to_i
 end
 
-puts persons.keys.inspect
+puts
+persons.each {|key, value| puts "#{key}\n  #{value}"}
