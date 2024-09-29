@@ -8,3 +8,4 @@ end
 
 puts
 persons.each {|key, value| puts "#{key}\n  #{value}"}
+
