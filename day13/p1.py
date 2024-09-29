@@ -4,7 +4,6 @@ from collections import defaultdict
 persons = defaultdict(dict)
 
 
-#INPUT_FILE = "sample1.txt"
 INPUT_FILE = "test1.txt"
 
 
@@ -23,7 +22,7 @@ for name in names:
     persons[name]["Victoria"] = 0
 
 
-def next_happiest(person):
+def next_happiest(person, table):
     max_happiness = -30000
     happiest = None
     neighbours = persons[person]
@@ -36,12 +35,14 @@ def next_happiest(person):
     return happiest
 
 
-def arrange_table(first_person, table):
+def arrange_table(first_person):
+    table = []
     table.append(first_person)
     next_person = first_person
     for _ in range(len(persons) - 1):
-        next_person = next_happiest(next_person)
+        next_person = next_happiest(next_person, table)
         table.append(next_person)
+    return table
 
 
 def table_happiness(table):
@@ -57,8 +58,7 @@ def table_happiness(table):
 
 h = []
 for person in persons:
-    table = []
-    arrange_table(person, table)
+    table = arrange_table(person)
     h.append(table_happiness(table))   
 
 print(max(h))
