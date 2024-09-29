@@ -31,7 +31,7 @@ def next_happiest(person, table):
             current_happiness = neighbours[neighbour] + persons[neighbour][person]
             if current_happiness > max_happiness:
                 happiest = neighbour
-                max_happiness = neighbours[neighbour] + persons[neighbour][person]
+                max_happiness = current_happiness 
     return happiest
 
 
