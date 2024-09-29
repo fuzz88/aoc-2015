@@ -23,11 +23,6 @@ for name in names:
     persons[name]["Victoria"] = 0
 
 
-print()
-for person, value in persons.items():
-    print(f"{person}\n   {value}")
-
-
 def next_happiest(person):
     max_happiness = -30000
     happiest = None
@@ -60,11 +55,10 @@ def table_happiness(table):
     return total_happiness
 
 
-print()
+h = []
 for person in persons:
     table = []
     arrange_table(person, table)
-    happiness = table_happiness(table)
-    print("table:", table)
-    print(happiness)
+    h.append(table_happiness(table))   
 
+print(max(h))
