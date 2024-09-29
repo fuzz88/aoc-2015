@@ -1,5 +1,3 @@
-require 'set'
-
 persons = Hash.new { |h, k| h[k] = {} }
 
 # Input file
