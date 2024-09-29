@@ -4,11 +4,11 @@ from collections import defaultdict
 persons = defaultdict(dict)
 
 
-#file_name = "sample1.txt"
-file_name = "test1.txt"
+#INPUT_FILE = "sample1.txt"
+INPUT_FILE = "test1.txt"
 
 
-with open(file_name) as f:
+with open(INPUT_FILE) as f:
     data = f.readlines()
     for line in data:
         m = re.match(r"^(\w+) would (gain|lose) (\d*).* (\w+).", line)
@@ -21,6 +21,7 @@ persons["Victoria"] = {}
 for name in names:
     persons["Victoria"][name] = 0
     persons[name]["Victoria"] = 0
+
 
 print()
 for person, value in persons.items():
@@ -47,6 +48,7 @@ def arrange_table(first_person, table):
         next_person = next_happiest(next_person)
         table.append(next_person)
 
+
 def table_happiness(table):
     total_happiness = 0
     for index, person in enumerate(table):
@@ -57,8 +59,8 @@ def table_happiness(table):
         total_happiness = total_happiness + h1 + h2
     return total_happiness
 
-print()
 
+print()
 for person in persons:
     table = []
     arrange_table(person, table)
