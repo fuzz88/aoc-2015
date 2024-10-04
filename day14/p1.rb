@@ -2,7 +2,6 @@ max_dist = 0
 
 $stdin.readlines.each do |line|
   m = line.match(/^(\w*) can fly (\d*).* for (\d*).* for (\d*)/)
-  puts m[1], m[2], m[3], m[4] 
   dist = 0
   t = 0
   while t < 2503 do
